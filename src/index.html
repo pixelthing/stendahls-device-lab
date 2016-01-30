@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="{{ meta.description }}" />
+  <meta name="keywords" content="{{ meta.keywords }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  
+  <title>{{ meta.pageTitle }}</title>
+
+  <link rel="stylesheet" href="css/main.css"/>
+  
+  <link rel="manifest" href="{{ globals 'site.meta.manifestPath' }}" />
+  <meta name="theme-color" content="{{ globals 'site.themeColor' }}" />
+  <meta name="application-name" content="{{ yep }}" />
+  <link rel="icon" href="{{ globals 'site.meta.favIconPath' }}" type="image/x-icon" />
+  <link rel="icon" sizes="192x192" href="{{ globals 'site.meta.icon192Url' }}" />
+  <meta name="apple-mobile-web-app-title" content="{{ globals 'site.title' }}">
+  <link rel="apple-touch-icon" href="{{ globals 'site.meta.appleTouchIconiPhoneUrl' }}"/>
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ globals 'site.meta.appleTouchIconiPhone2Url' }}"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ globals 'site.meta.appleTouchIconiPad2Url' }}"/>
+  <meta name="msapplication-TileImage" content="{{ globals 'site.meta.appleTouchIconiPad2Url' }}" />
+  <meta name="msapplication-TileColor" content="{{ globals 'site.themeColor' }}" />
+
+  <script src="js/script.js" defer></script>
+  
+</head>
+<body>
+
+</body>
+</html>
