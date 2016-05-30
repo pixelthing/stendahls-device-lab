@@ -33,8 +33,13 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    '<%= settings.src %>/js/controller.js',
-                    '<%= settings.src %>/js/modules/**/*.js'
+                    '<%= settings.npm %>/fontfaceobserver/fontfaceobserver.js',
+                    '<%= settings.npm %>/jquery/dist/jquery.js',
+                    '<%= settings.npm %>/csvtojson/dist/csvtojson.js',
+                    '<%= settings.npm %>/ua-parser-js/dist/ua-parser.min.js',
+                    '<%= settings.src %>/js/base/*.js',
+                    '<%= settings.src %>/js/modules/*.js',
+                    '<%= settings.src %>/js/process/*.js'
                 ],
                 dest: '<%= settings.dist %>/js/script.js'
             }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="description" content="{{ meta.description }}" />
   <meta name="keywords" content="{{ meta.keywords }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1" />
   <meta name="msapplication-tap-highlight" content="no" />
   
   <title>{{ meta.pageTitle }}</title>
@@ -22,11 +22,167 @@
   <link rel="apple-touch-icon" sizes="152x152" href="{{ globals 'site.meta.appleTouchIconiPad2Url' }}"/>
   <meta name="msapplication-TileImage" content="{{ globals 'site.meta.appleTouchIconiPad2Url' }}" />
   <meta name="msapplication-TileColor" content="{{ globals 'site.themeColor' }}" />
-
-  <script src="js/script.js" defer></script>
   
-</head>
-<body>
-
-</body>
+  <script src="js/script.js"></script>
+  
+  </head>
+  <body data-js-background-click ontouchstart="">
+    
+    <header class="slide__header">
+      Current data from <span data-js-data-name></span>
+    </header>
+    
+    <footer class="slide__footer">
+      <span data-js-device-vendor></span>
+      <span data-js-device-model></span>
+      |
+      <span data-js-platform-name></span>
+      <span data-js-platform-version></span>
+      |
+      <span data-js-browser-name></span>
+      <span data-js-browser-version></span>
+      (<span data-js-browser-engine></span>)
+      |
+      <span data-js-screen-width></span>x<span data-js-screen-height></span>px
+    </footer>
+    
+    <main class="slide__container" data-js-next-click>
+      
+      <section class="slide--all">
+        
+        <i data-js-id></i>
+        
+        <h2>
+          <span data-js-device-stats-percent></span>%
+          <small>
+            of ALL sessions are from
+            <span data-js-device-cat></span> devices
+          </small>
+        </h2>
+        
+        <h2>
+          <span data-js-browser-stats-cat-percent></span>%
+          <small>
+            of 
+            <span data-js-device-cat></span>
+            sessions are from
+            <span data-js-browser-name-alt></span>
+          </small>
+        </h2>
+        
+        <h2>
+          <span data-js-browser-stats-all-percent></span>%
+          <small>
+            of ALL sessions are from
+            <span data-js-browser-name-alt></span>
+            <span data-js-device-cat></span> devices
+          </small>
+        </h2>
+        
+        <h2>
+          <span data-js-screen-stats-cat-percent></span>%
+          <small>
+            of 
+            <span data-js-device-cat></span>
+            sessions are from
+            <span data-js-screen-width></span>x<span data-js-screen-height></span> screen size
+            <span data-js-screen-name></span>
+          </small>
+        </h2>
+        
+        <h2>
+          <span data-js-screen-stats-all-percent></span>%
+          <small>
+            of ALL sessions are from
+            <span data-js-screen-width></span>x<span data-js-screen-height></span> screen size
+            <span data-js-screen-name></span>
+          </small>
+        </h2>
+      
+      </section>
+      
+      <!-- DEVICE TYPE -->
+      
+      <section class="slide slide--active" data-js-slide data-js-error>
+        
+        <div class="slide__blob">
+          
+          <h2 class="slide__blob__text">
+            <span class="slide__blob__text__value" data-js-device-stats-percent>??</span><span class="slide__blob__text__percent">%</span>
+            <small class="slide__blob__text__meta">
+              of sessions are from
+              <span data-js-device-cat>???</span>s
+            </small>
+          </h2>
+          <span class="slide__blob__bg slide__blob__bg--error"></span>
+          
+        </div>
+        
+      </section>
+      
+      <!-- BROWSER TYPE -->
+      
+      <section class="slide" data-js-slide data-js-error>
+        
+        <div class="slide__blob">
+          
+          <h2 class="slide__blob__text">
+            <span class="slide__blob__text__value" data-js-browser-stats-all-percent>??</span><span class="slide__blob__text__percent">%</span>
+            <small class="slide__blob__text__meta">
+              of sessions are from
+              <span data-js-browser-name-alt>???</span>
+              on
+              <span data-js-device-cat>???</span>
+            </small>
+          </h2>
+          <span class="slide__blob__bg slide__blob__bg--error"></span>
+          
+          <div class="slide__blob slide__blob--small">
+            <h2 class="slide__blob__text slide__blob__text--small">
+              <span class="slide__blob__text__value slide__blob__text__value--small" data-js-browser-stats-cat-percent>??</span><span class="slide__blob__text__percent slide__blob__text__percent--small">%</span>
+              <small class="slide__blob__text__meta">
+                of <span data-js-device-cat>???</span>s
+              </small>
+            </h2>
+            <span class="slide__blob__bg slide__blob__bg--small"></span>
+          </div>
+          
+        </div>
+        
+      </section>
+      
+      <!-- SCREEN SIZE -->
+      
+      <section class="slide" data-js-slide data-js-error>
+        
+        <div class="slide__blob">
+          
+          <h2 class="slide__blob__text">
+            <span class="slide__blob__text__value" data-js-screen-stats-all-percent>??</span><span class="slide__blob__text__percent">%</span>
+            <small class="slide__blob__text__meta">
+              of sessions are at
+              <span data-js-screen-width>???</span>x<span data-js-screen-height>???</span>
+              <span data-js-screen-name></span>
+            </small>
+          </h2>
+          <span class="slide__blob__bg slide__blob__bg--error"></span>
+          
+          <div class="slide__blob slide__blob--small">
+            <h2 class="slide__blob__text slide__blob__text--small">
+              <span class="slide__blob__text__value slide__blob__text__value--small" data-js-screen-stats-cat-percent>??</span><span class="slide__blob__text__percent slide__blob__text__percent--small">%</span>
+              <small class="slide__blob__text__meta">
+                of <span data-js-device-cat>???</span>s
+              </small>
+            </h2>
+            <span class="slide__blob__bg slide__blob__bg--small"></span>
+          </div>
+          
+        </div>
+        
+      </section>
+      
+    </main>
+    
+    
+  </body>
 </html>
